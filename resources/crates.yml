@@ -1,0 +1,102 @@
+---
+crates:
+# GỬI LỜI CẢM ƠN TỚI @DaPigGuy và plugin PiggyCrates của bạn ấy, plugin có thể tạo ra nhiều Crate !
+#
+# BẢN QUYỀN: Một số phần của code trong này đã được lấy từ plugin của @DaPigGuy,
+# Tôi đã yêu cầu sự cho phép của bạn ấy để sử dụng mã của bạn ấy như một tài liệu tham khảo để tránh
+# than phiền không cần thiết hoặc mâu thuẫn.
+#
+# Để thưởng cho người chơi bằng một lệnh, hãy đảm bảo rằng meta của phần thưởng giống như
+# commandMeta được đặt trong config.yml nếu không lệnh sẽ không hoạt động.
+#
+# Ví dụ về cách config.
+# Lưu ý: Vui lòng sử dụng các tab thay vì dấu cách.
+#-------------------------------------------------------------------------------------------------------------------------------
+# example:               | đặt tên cho Crate
+#  drops:                | danh sách items có thể nhận được từ Crate
+#   - name: "G-Helmet"   | Tùy chỉnh tên cho item. Có thể dùng "§" để thêm màu vào.
+#     id: 1              | ID của vật phẩm.
+#     meta: 0            | Meta hoặc Damage cho item.
+#     amount: 1          | số lượng items mà người chơi có thể nhận được.
+#     enchantments:      | chỉnh enchant cho item tại đây. Cả VanillaEnchantments và PiggyCustomEnchants đều đã được hỗ trợ trong này.
+#       protection:      | tên enchant mà bạn muốn đặt.
+#         level: 3       | cấp độ enchant.
+#       unbreaking:      | (bạn có thể đặt nhiều enchant miễn là chúng tồn tại !)
+#         level: 2       | NOTE: Nếu bạn không muốn enchant, bạn chỉ cần xóa hết dòng enchantments !
+#     lore: "DÙNG TÔI ĐI !"     | Tùy chỉnh lore trên item. Dùng "\n" để xuống dòng.
+#     command: "say hi"  | Thêm một lệnh khi người chơi thắng Crate. Sử dụng "%PLAYER%" để chèn tên người chơi.
+#  block: "911:0"        | Đặt ID khối bạn muốn Crate đại diện. Đặt một cái rương lên và nó sẽ kích hoạt Crate.
+# ------------------------------------------------------------------------------------------------------------------------------
+  common:
+    drops:
+      - name: "§a§lG Sword§r"
+        id: 276
+        meta: 0
+        amount: 1
+        enchantments:
+          protection:
+            level: 3
+        lore: "OP Sword\nFire Blade"
+      - name: "Cooked Chicken"
+        id: 366
+        meta: 0
+        amount: 16
+    block: "173:0"
+  uncommon:
+    drops:
+      - name: "Money Drop"
+        id: 339
+        meta: 50
+        amount: 1
+        command: "givemoney %PLAYER% 100000"
+      - name: "Iron Ingot"
+        id: 265
+        meta: 0
+        amount: 10
+    block: "42:0"
+  vote:
+    drops:
+      - name: "Iron Ingot"
+        id: 265
+        meta: 0
+        amount: 10
+      - name: "Gold Ingot"
+        id: 266
+        meta: 0
+        amount: 10
+      - name: "Oak Wood"
+        id: 17
+        meta: 0
+        amount: 64
+    block: "41:0"
+  mythic:
+    drops:
+      - name: "Diamond"
+        id: 264
+        meta: 0
+        amount: 16
+      - name: "Emerald"
+        id: 388
+        meta: 0
+        amount: 16
+      - name: "Golden Apple"
+        id: 322
+        meta: 0
+        amount: 16
+    block: "57:0"
+  legendary:
+    drops:
+      - name: "Obsidian"
+        id: 49
+        meta: 0
+        amount: 32
+      - name: "Enchanted Apple"
+        id: 466
+        meta: 0
+        amount: 16
+      - name: "Bedrock"
+        id: 7
+        meta: 0
+        amount: 5
+    block: "133:0"
+...
