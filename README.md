@@ -2,6 +2,7 @@
 ##### THỜI ĐIỂM MÌNH VIỆT HÓA PLUGIN: 1/6/2018 (v6.0)
 ##### THỜI ĐIỂM HIỆN TẠI (NGUỒN CHÍNH THỨC): 7/7/2020 (v9.2)
 ##### Vậy là cũng đã gần ~3 năm kể từ khi mình không cập nhật bản việt hóa mới nữa, ngay cả bạn cũng sẽ thấy được sự thay đổi cực lớn này ở trang chính của plugin! Vì vậy mình KHUYÊN các bạn nên tải plugin chính thức bằng link nguồn mình để ở dưới. CẢM ƠN CÁC BẠN ĐÃ ĐỌC!!!
+`MẸO: Bạn lười việt hóa ư? Plugin này là một bản việt hóa CÓ SẴN dành cho ông bạn đấy :) Cách làm như thế nào thì tự biết nhé, lớn đến từng này rồi mà không biết copy paste thì tui chịu :<`
 <h1>MysteryCrateVN<img src="https://proxy.spigotmc.org/5d342a3800c738ecde4fb4faff2e9e4f5570eeec?url=http%3A%2F%2Fs016.radikal.ru%2Fi335%2F1710%2F6a%2F627ed9d10863.gif" height="64" width="64" align="left"></img></h1>
 
 + Plugin MysteryCrate dành cho người Việt! Đã được việt hóa 100%.
