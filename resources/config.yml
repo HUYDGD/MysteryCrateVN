@@ -6,57 +6,72 @@
 #  \_|  |_/\__, |___/\__\___|_|   \__, |\____/_|  \__,_|\__\___|
 #           __/ |                  __/ |
 #          |___/                  |___/  Bởi @JackMD cho PMMP
-#                                              
 #
-# MysteryCrate, là một plugin Crate cho PocketMine-MP
-# Bản Quyền (c) 2018 JackMD  < https://github.com/JackMD >
+#
+# MysteryCrate, một plugin thùng cho PocketMine-MP
+# Bản quyền (©) 2018 JackMD <https://github.com/JackMD>
 #
 # Discord: JackMD#3717
 # Twitter: JackMTaylor_
 #
 # Phần mềm này được phân phối theo "Giấy phép Công cộng GNU v3.0".
-# Giấy phép này cho phép bạn sử dụng hoặc sửa đổi nó nhưng bạn không
-# được phép bán plugin này bằng mọi giá. Nếu làm như vậy, chúng tôi
-# sẽ thực hiện một hành động cần thiết.
+# Giấy phép này cho phép bạn sử dụng hoặc sửa đổi nó nhưng bạn không được phép
+# bán plugin này với bất kỳ giá nào. Nếu bị phát hiện làm như vậy, một
+# hành động cần thiết bắt buộc sẽ được thực hiện.
 #
 # MysteryCrate được phân phối với hy vọng rằng nó sẽ hữu ích,
-# nhưng KHÔNG CÓ BẤT KÌ BẢO HÀNH; thậm chí không có bảo hành ngụ ý
-# TRÁCH NHIỆM hoặc PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ. Xem
-# GNU General Public License v3.0 để biết thêm chi tiết.
+# nhưng KHÔNG CÓ BẤT KỲ BẢO HÀNH NÀO; mà không có bảo hành ngụ ý
+# KHẢ NĂNG PHÁT TRIỂN HOẶC PHÙ HỢP VỚI MỤC ĐÍCH CỤ THỂ. Xem
+# Giấy phép Công cộng GNU v3.0 để biết thêm chi tiết.
 #
-# Bạn đã nhận được một bản sao của Giấy phép Công cộng GNU v3.0
+# Bạn sẽ nhận được một bản sao của Giấy phép Công cộng GNU v3.0
 # cùng với chương trình này. Nếu không, hãy xem
 # <https://opensource.org/licenses/GPL-3.0>.
-#
-# PLUGIN ĐƯỢC DỊCH RA TIẾNG VIỆT BỞI SÓI
-# BẢN QUYỀN PLUGIN THUỘC VỀ JACKMD
-#  -----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-# Bạn có thể chỉnh sửa ID:Meta của key để mở Crates ở dưới đây !
-# (Tips) Nhưng tôi khuyên bạn không nên chỉnh trừ khi bạn biết sửa đổi mã nguồn !!
+# KHÔNG CHỈNH SỬA GIÁ TRỊ NÀY.
+# CHỈ DÙNG CHO NỘI BỘ.
+config-version: 2
+
+# ID:META của chìa khóa mà bạn muốn người chơi sử dụng để mở thùng.
+# Tốt hơn hết là bạn không nên chỉnh sửa giá trị này trừ khi bạn có thể chỉnh sửa mã nguồn.
 key: "339:0"
 
-# Chỉnh sửa mô tả cho Key
-# Khi cầm Key trên tay, nó sẽ hiển thị những mô tả này. Khá là hữu ích phải không nào ?
-descOne: "Sử dụng Key tại /warp crates."
-descTwo: "Bạn có cơ hội nhận được Công Cụ OP đấy !!!"
+# Mô tả cho chìa khóa. Sử dụng \n để xuống dòng.
+lore: "Use this key at /warp crates.\nWin OP stuff."
 
-# Hãy nhập tên Thế giới (world) mà bạn muốn đặt Crate nào !
-# (Tips) Ví dụ thư mục của bạn là world nhưng tên thế giới của bạn là lobby thì bạn hãy nhập "lobby" vào crateWorld nhé !
-crateWorld: "Master"
+# Nhập tên thư mục của thế giới mà bạn cho phép plugin thùng được hoạt động trong thế giới đó.
+# Ví dụ:
+# Nếu thế giới của bạn tên "spawn" nhưng thư mục thế giới lại tên "spw" thì hãy đặt spw trong crateWorld.
+crateWorld: "world"
 
-# Đặt giá trị bạn muốn lệnh được nhận diện. Hãy chắc chắn rằng nó ở giữa 10-50
-# Nếu bạn muốn thưởng cho người chơi bằng một lệnh, hãy đặt meta của phần thưởng trong crates.yml 
-# đến giá trị bạn đặt trong commandMeta.
-# (phần này mình cũng không biết dịch sao cho đúng nữa -_- nhưng mà, theo mình nghĩ thì cái commandMeta này là Custom Item)
+# Đặt giá trị mà bạn muốn lệnh được nhận dạng, đảm bảo nó nằm trong khoảng 10 - 50
+# Nếu như bạn muốn thưởng cho người chơi bằng lệnh, đặt giá trị meta của 
+# phần thưởng trong tập tin crates.yml thành giá trị mà bạn đặt trong commandMeta.
 commandMeta: 50
 
-# Nhập thời gian bạn muốn Crate chạy vào đây. Tăng giá trị này sẽ tăng
-# thời gian người chơi nhận được phần thưởng và ngược lại.
-# Tôi khuyến nghị bạn nên để nguyên 2
-# Giá trị được đặt là đơn vị giây !
-tickDelay: 2
+# Đặt số lệnh tối đa có thể thực hiện tại một thời điểm.
+maxCommands: 5
 
-# Nếu như server bạn khá lag và đông người thì tôi khuyên bạn nên để false.
-# Điều này sẽ tắt hiệu ứng khi quay Crate, nếu bạn muốn bật lại, hãy để true ở showParticle
+# Đặt thời gian mà bạn muốn thùng chạy, tăng giá trị này sẽ làm tăng thời gian
+# những vật phẩm lấp đầy thanh quay thưởng và ngược lại
+# Giá trị được nhập tính bằng giây.
+tickDelay: 2 # Khuyên nên đặt thành 0, để tối ưu lag cho máy chủ.
+
+# Điều chỉnh tốc độ di chuyển của các vật phẩm bên trong rương.
+# Khuyến nghị đặt nó thành 5.
+scrollSpeed: 5
+
+# Nếu máy chủ của bạn bị trễ thì hãy đặt showParticle thành false.
+# Đặt giá trị này thành false sẽ loại bỏ các hiệu ứng phía trên thùng.
 showParticle: true
+
+# Chọn loại hiệu ứng bạn muốn hiển thị phía trên thùng.
+# Hiện tại thì có 5 loại:
+# CloudRain , Helix , DoubleHelix , Ting , Crown
+particleType: "Helix"
+
+# Điều chỉnh tỷ lệ xuất hiện của các hiệu ứng.
+# Mặc định là 5.
+# Tăng giá trị này nếu máy chủ của bạn bị chậm.
+particleTickRate: 5

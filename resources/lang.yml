@@ -1,0 +1,24 @@
+---
+# Tập tin ngôn ngữ MysteryCrate.
+#
+# Sử dụng "§" để thêm màu vào chữ.
+
+no_perm_use_crate: "§cBạn không có quyền sử dụng thùng này."
+no_perm_destroy: "§cBạn không có quyền phá hủy thùng này."
+no_perm_create: "§cBạn không có quyền để tạo thùng này."
+
+crate_destroy_successful: "§aThùng đã được gỡ bỏ. Khởi động server để xóa chữ nổi."
+crate_place_successful: "§aThùng đã được tạo. Khởi động server để hiện chữ nổi."
+
+no_key: "§cBạn cần có chìa khóa %TYPE% để mở thùng này."
+
+error_sneak: "§cXin hãy đứng lên."
+error_crate_in_use: "§cThùng đang được sử dụng. Vui lòng đợi..."
+
+# Tin nhắn được hiển thị tới người chơi khi họ mở thùng và trúng thưởng.
+# Chú thích:
+# %REWARD% - Tên vật phẩm mà người chơi quay trúng.
+# %COUNT% - Số lượng mà người chơi sẽ nhận được từ vật phẩm đã quay.
+# %CRATE% - Tên thùng người chơi quay.
+win_message: "§aBạn đã nhận được §dx%COUNT% §e%REWARD% §atừ thùng §6%CRATE%§a."
+...

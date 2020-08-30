@@ -1,32 +1,41 @@
 ---
+# KHÔNG CHỈNH SỬA GIÁ TRỊ NÀY.
+# CHỈ DÙNG CHO NỘI BỘ.
+crates-version: 1
+
+# GHI CHÚ QUAN TRỌNG:
+# Để thưởng cho người chơi bằng lệnh, hãy chắc chắn rằng meta của phần thưởng giống với
+# giá trị commandMeta được đặt trong config.yml nếu không lệnh sẽ không hoạt động.
+#
+# Chú thích:
+# - Sử dụng tab thay vì dấu cách.
+# - Bạn có thể thêm vô hạn thùng bằng ví dụ bên dưới.
+# - Sử dụng "§" để thêm màu vào chữ.
+# - Các mục/chìa khóa được đánh dấu (TÙY CHỌN) nghĩa là không bắt buộc phải thêm chúng. Thùng vẫn sẽ hoạt động tốt nếu không có nó.
 crates:
-# GỬI LỜI CẢM ƠN TỚI @DaPigGuy và plugin PiggyCrates của bạn ấy, plugin có thể tạo ra nhiều Crate !
-#
-# BẢN QUYỀN: Một số phần của code trong này đã được lấy từ plugin của @DaPigGuy,
-# Tôi đã yêu cầu sự cho phép của bạn ấy để sử dụng mã của bạn ấy như một tài liệu tham khảo để tránh
-# than phiền không cần thiết hoặc mâu thuẫn.
-#
-# Để thưởng cho người chơi bằng một lệnh, hãy đảm bảo rằng meta của phần thưởng giống như
-# commandMeta được đặt trong config.yml nếu không lệnh sẽ không hoạt động.
-#
-# Ví dụ về cách config.
-# Lưu ý: Vui lòng sử dụng các tab thay vì dấu cách.
-#-------------------------------------------------------------------------------------------------------------------------------
-# example:               | đặt tên cho Crate
-#  drops:                | danh sách items có thể nhận được từ Crate
-#   - name: "G-Helmet"   | Tùy chỉnh tên cho item. Có thể dùng "§" để thêm màu vào.
-#     id: 1              | ID của vật phẩm.
-#     meta: 0            | Meta hoặc Damage cho item.
-#     amount: 1          | số lượng items mà người chơi có thể nhận được.
-#     enchantments:      | chỉnh enchant cho item tại đây. Cả VanillaEnchantments và PiggyCustomEnchants đều đã được hỗ trợ trong này.
-#       protection:      | tên enchant mà bạn muốn đặt.
-#         level: 3       | cấp độ enchant.
-#       unbreaking:      | (bạn có thể đặt nhiều enchant miễn là chúng tồn tại !)
-#         level: 2       | NOTE: Nếu bạn không muốn enchant, bạn chỉ cần xóa hết dòng enchantments !
-#     lore: "DÙNG TÔI ĐI !"     | Tùy chỉnh lore trên item. Dùng "\n" để xuống dòng.
-#     command: "say hi"  | Thêm một lệnh khi người chơi thắng Crate. Sử dụng "%PLAYER%" để chèn tên người chơi.
-#  block: "911:0"        | Đặt ID khối bạn muốn Crate đại diện. Đặt một cái rương lên và nó sẽ kích hoạt Crate.
-# ------------------------------------------------------------------------------------------------------------------------------
+# CẤU HÌNH VÍ DỤ.
+# ------------------------
+# crate-name:              | Đặt tên cho thùng.
+#  drops:                  | Danh sách vật phẩm rơi ra từ thùng.
+#   - name: "Good Helmet"  | Tùy chỉnh tên cho vật phẩm. (TÙY CHỌN).
+#     id: 1                | ID của vật phẩm.
+#     meta: 0              | Đặt giá trị meta hoặc damage cho vật phẩm.
+#     amount: 1            | Số lượng vật phẩm mà người chơi có thể nhận được.
+#     enchantments:        | Thêm enchant cho vật phẩm tại đây. Cả VanillaEnchantments và PiggyCustomEnchants đều đã được hỗ trợ trong này. (TÙY CHỌN).
+#       protection:        | Tên enchant mà bạn muốn đặt.
+#         level: 3         | Cấp độ enchant.
+#       unbreaking:        | (Bạn có thể đặt rất nhiều enchant miễn là chúng tồn tại!)
+#         level: 2         | CHÚ THÍCH: Nếu bạn không muốn enchant, bạn chỉ cần xóa hết dòng enchantments!
+#     lore: "DÙNG TÔI ĐI"  | Tùy chỉnh mô tả vật phẩm. Dùng "\n" để xuống dòng. (TÙY CHỌN).
+#     commands:            | Thêm lệnh được thực thi khi người chơi quay thùng. (TÙY CHỌN).
+#     - "say Hello"        | Sử dụng "%PLAYER%" để chèn tên người chơi.
+#     - "say Test"         | Đừng quên chú ý đến maxCommands trong tập tin config.yml.
+#  block: "911:0"          | Đặt ID khối mà bạn muốn đại diện cho thùng. Đặt một cái rương lên và nó sẽ kích hoạt thùng.
+#  broadcast:              | Bạn muốn gửi tin nhắn khi người chơi mở thùng?
+#   enable: true           | Đặt giá trị này thành true để bật tin nhắn và false để tắt tin nhắn.
+#   command: "say Hello"   | Lệnh được thực thi khi người chơi mở thùng.
+# ------------------------
+
   common:
     drops:
       - name: "§a§lG Sword§r"
@@ -37,66 +46,73 @@ crates:
           protection:
             level: 3
         lore: "OP Sword\nFire Blade"
-      - name: "Cooked Chicken"
-        id: 366
+      - id: 366
         meta: 0
         amount: 16
     block: "173:0"
+    broadcast:
+      enable: true
+      command: "say \"%PLAYER%\" đang mở thùng COMMON tại khu quay thưởng."
   uncommon:
     drops:
       - name: "Money Drop"
         id: 339
         meta: 50
         amount: 1
-        command: "givemoney %PLAYER% 100000"
-      - name: "Iron Ingot"
-        id: 265
+        commands:
+          - "givemoney \"%PLAYER%\" 100000"
+          - "say \"%PLAYER%\" đã nhận được $100,000."
+      - id: 265
         meta: 0
         amount: 10
     block: "42:0"
+    broadcast:
+      enable: true
+      command: "say \"%PLAYER%\" đang mở thùng UNCOMMON tại khu quay thưởng."
   vote:
     drops:
-      - name: "Iron Ingot"
-        id: 265
+      - id: 265
         meta: 0
         amount: 10
-      - name: "Gold Ingot"
-        id: 266
+      - id: 266
         meta: 0
         amount: 10
-      - name: "Oak Wood"
-        id: 17
+      - id: 17
         meta: 0
         amount: 64
     block: "41:0"
+    broadcast:
+      enable: true
+      command: "say \"%PLAYER%\" đang mở thùng VOTE tại khu quay thưởng."
   mythic:
     drops:
-      - name: "Diamond"
-        id: 264
+      - id: 264
         meta: 0
         amount: 16
-      - name: "Emerald"
-        id: 388
+      - id: 388
         meta: 0
         amount: 16
-      - name: "Golden Apple"
-        id: 322
+      - id: 322
         meta: 0
         amount: 16
     block: "57:0"
+    broadcast:
+      enable: true
+      command: "say \"%PLAYER%\" đang mở thùng MYTHIC tại khu quay thưởng."
   legendary:
     drops:
-      - name: "Obsidian"
-        id: 49
-        meta: 0
-        amount: 32
-      - name: "Enchanted Apple"
-        id: 466
+      - id: 322
         meta: 0
         amount: 16
-      - name: "Bedrock"
-        id: 7
+      - id: 388
         meta: 0
-        amount: 5
+        amount: 16
     block: "133:0"
+    broadcast:
+      enable: true
+      command: "say \"%PLAYER%\" đang mở thùng LEGENDARY tại khu quay thưởng."
+
+# --------------------------------------
+# BẠN CÓ THỂ THÊM NHIỀU CRATES BÊN DƯỚI.
+# --------------------------------------
 ...
